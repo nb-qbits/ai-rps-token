@@ -1,9 +1,18 @@
 # 🚀 AI Inference GPU Dashboard
 
-## Setup
+Spin up a full AI inference system on OpenShift and visualize GPU utilization, throughput, and scaling behavior in minutes.
 
-### 1. Clone repo
+---
+
+## ⚡ Quick Start (Recommended)
+
+```bash
 git clone https://github.com/nb-qbits/ai-rps-token.git
+cd ai-rps-token
+
+oc login <your-cluster>
+
+export HF_TOKEN=your_huggingface_token
 cd ai-rps-token/k8s
 
 ### 2. Install dependencies
