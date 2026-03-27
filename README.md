@@ -25,7 +25,7 @@ $oc login <cluster-url>
 $export HF_TOKEN=your_token
 
 ### 5. Run demo
-$./run-demo.sh
+$./k8s/run-demo.sh
 
 ### 6. Launch dashboard
 streamlit run dashboard.py
