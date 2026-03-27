@@ -2,6 +2,9 @@ import streamlit as st
 import subprocess
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 st.set_page_config(page_title="AI GPU Dashboard", layout="wide")
 
@@ -52,7 +55,7 @@ def get_gpu_stats():
 # Run Test
 # -------------------------------
 def run_test(concurrency, requests):
-    cmd = f"CONCURRENCY={concurrency} REQUESTS={requests} ./test.sh"
+    cmd = f"CONCURRENCY={c} REQUESTS={requests} {BASE_DIR}/test.sh"
     result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
 
     if debug:
@@ -90,7 +93,7 @@ def run_sweep(requests):
     progress = st.progress(0)
 
     for i, c in enumerate(concurrency_levels):
-        cmd = f"CONCURRENCY={c} REQUESTS={requests} ./test.sh"
+        cmd = f"CONCURRENCY={c} REQUESTS={requests} {BASE_DIR}/test.sh"
         result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
 
         for line in result.stdout.splitlines():
