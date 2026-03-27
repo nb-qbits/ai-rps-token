@@ -3,7 +3,7 @@
 ## Setup
 
 ### 1. Clone repo
-git clone https://github.com/<your-username>/ai-rps-token.git
+git clone https://github.com/nb-qbits/ai-rps-token.git
 cd ai-rps-token/k8s
 
 ### 2. Install dependencies
