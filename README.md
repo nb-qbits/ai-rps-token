@@ -28,4 +28,4 @@ $export HF_TOKEN=your_token
 $./k8s/run-demo.sh
 
 ### 6. Launch dashboard
-streamlit run dashboard.py
+streamlit run ./k8s/dashboard.py
