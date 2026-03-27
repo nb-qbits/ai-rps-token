@@ -55,7 +55,7 @@ def get_gpu_stats():
 # Run Test
 # -------------------------------
 def run_test(concurrency, requests):
-    cmd = f"CONCURRENCY={c} REQUESTS={requests} {BASE_DIR}/test.sh"
+    cmd = f"CONCURRENCY={concurrency} REQUESTS={requests} {BASE_DIR}/test.sh"
     result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
 
     if debug:
